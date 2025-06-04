@@ -1,101 +1,135 @@
+import Image3 from "@/assets/images/image.avif";
+import AgencyImage from "@/assets/images/image1.jpg";
+import Image2 from "@/assets/images/image2.jpg";
 import Image from "next/image";
+import FeaturedProjects from "./components/Home/FeaturedProjects";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <div>
+      <div
+        className={`w-full flex justify-center items-center  h-full rounded-[30px] p-6 sm:p-10 md:p-12 xl:p-16`}
+      >
+        <div
+          className={`flex flex-col lg:flex-row-reverse justify-between items-center gap-5 lg:gap-10 xl:gap-14`}
+        >
+          {/* <CustomYTModal /> */}
+          <div className="sm:flex-1 w-fit md:w-max h-[300px] md:h-[400px] lg:h-full">
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src={AgencyImage}
+              alt="image"
+              className="w-full h-full max-h-[600px] rounded-[30px]"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          </div>
+          <div className="flex-1 w-full flex flex-col py-6 text-center lg:text-left">
+            <p className="headingStyle mb-4">
+              {" "}
+              Your <span className="text-[#187AC3]">Trusted Partner</span> for
+              Custom Textile Solutions
+            </p>
+            <p className="commonText">
+              Welcome to NVG Creations, where Tradition meets Artistry! We
+              specialise in exquisite Textile Hand Block Printing, Digital
+              Printing, Embroidery, Crochet and Handmade Textile accessories,
+              crafted with precision and passion. Each piece reflects the rich
+              heritage of Indian craftsmanship, ensuring timeless elegance in
+              every fabric. Explore our collection and bring home the beauty of
+              Handcrafted Textiles.
+            </p>
+          </div>
+        </div>{" "}
+      </div>
+
+      <div
+        className={`w-full flex justify-center items-center  h-full rounded-[30px] p-6 sm:p-10 md:p-12 xl:p-16`}
+      >
+        <div
+          className={`flex flex-col lg:flex-row justify-between items-center gap-5 lg:gap-10 xl:gap-14`}
+        >
+          <div className="sm:flex-1 w-fit md:w-max h-[300px] md:h-[400px]">
+            <Image
+              className="w-full h-full max-h-[600px] rounded-[30px]"
+              src={Image2}
+              alt="Image2"
+            />
+          </div>
+
+          <div className="flex-1 w-full flex flex-col py-6 text-center lg:text-left">
+            <p className="headingStyle">Our Products</p>
+            <section className="mb-8">
+              <ul className=" text-gray-700 text-lg leading-relaxed space-y-2">
+                <li>
+                  <strong>Hand Block Printed Fabrics:</strong> Authentic,
+                  eco-friendly prints on Cotton, Silk, and Linen.
+                </li>
+                <li>
+                  <strong>Designer Sarees & Dupattas:</strong> Elevate your
+                  wardrobe with our Handcrafted elegance.
+                </li>
+                <li>
+                  <strong>Home Furnishings:</strong> From table linens to
+                  cushion covers, bring artisanal charm to your space.
+                </li>
+                <li>
+                  <strong>Custom Orders:</strong> Personalised designs tailored
+                  to your Brand’s needs.
+                </li>
+              </ul>
+            </section>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+      </div>
+      <div
+        className={`w-full flex justify-center items-center  h-full rounded-[30px] p-6 sm:p-10 md:p-12 xl:p-16`}
+      >
+        <div
+          className={`flex flex-col lg:flex-row-reverse justify-between items-center gap-5 lg:gap-10 xl:gap-2`}
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          <div className="sm:flex-1 w-fit md:w-max h-[300px] md:h-[400px]">
+            <Image
+              className="w-full h-full max-h-[600px] rounded-[30px]"
+              src={Image3}
+              alt="Image3"
+            />
+          </div>
+
+          <div className="flex-1 w-full flex flex-col py-6 text-center lg:text-left">
+            <p className="headingStyle">Why Choose Us?</p>
+            <section className="mb-8">
+              <ul className=" text-gray-700 text-lg leading-relaxed space-y-2">
+                <li>
+                  <strong>Sustainable & Ethical:</strong> We use azo-free dyes
+                  and eco-friendly processes.
+                </li>
+                <li>
+                  <strong>Authentic Craftsmanship:</strong> Handmade by skilled
+                  artisans with generations of expertise.
+                </li>
+                <li>
+                  <strong>Customizable Designs:</strong> Tailored to your
+                  requirements for a unique touch.
+                </li>
+                <li>
+                  <strong>B2B Excellence:</strong> We cater to bulk orders with
+                  seamless delivery and quality assurance.
+                </li>
+              </ul>
+            </section>
+          </div>
+        </div>
+      </div>
+
+      <div className="marquee-wrapper">
+        <div className="marquee-text">
+          NVG Creations offers comprehensive Workshops and Training programs in
+          Hand Block Printing, Crochet, and Hand Embroidery, promoting the rich
+          heritage of traditional handcrafts.
+        </div>
+      </div>
+
+      <div className="mt-8 md:mt-14">
+        <FeaturedProjects />
+      </div>
     </div>
   );
 }
