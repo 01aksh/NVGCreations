@@ -19,3 +19,50 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.main-content {
+  flex: 1;
+  padding-top: 3rem;
+}
+
+@layer components {
+  .sds_layout_padding {
+    @apply px-6 sm:px-10 lg:px-10 xl:px-20 2xl:px-24;
+  }
+
+  .headingStyle {
+    @apply md:font-bold text-[26px] leading-normal lg:leading-[50px] xl:leading-[60px] sm:text-[26px] md:text-[30px] lg:text-[35px] xl:text-[52px] font-semibold;
+  }
+
+  .commonText {
+    @apply text-[18px] leading-[32px] font-normal text-[#4A4A4A];
+  }
+  .headingtitle {
+    @apply text-center font-semibold md:font-bold text-[35px] md:text-5xl lg:text-6xl mb-5 lg:mb-12;
+  }
+}
+.marquee-wrapper {
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.marquee-text {
+  display: inline-block;
+  padding-left: 100%;
+  font-size: 40px;
+  font-weight: bold;
+  color: #4e4949;
+  text-transform: uppercase;
+  text-shadow: #c90c0c 0px 0px 1px;
+  animation: scroll-text 30s linear infinite;
+}
+
+@keyframes scroll-text {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
